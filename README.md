@@ -1,0 +1,2 @@
+# SensorAI
+- motion detection project
