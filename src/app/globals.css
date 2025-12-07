@@ -30,7 +30,7 @@ body {
 .ant-radio-button-wrapper,
 .ant-switch-inner,
 .ant-dropdown-menu-item {
-  font-family: 'Comic Sans MS';
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* camera.js */
