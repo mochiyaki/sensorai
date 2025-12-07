@@ -14,7 +14,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "SensorAI",
-  description: "Webcam Motion Tracking Avatar",
+  description: "Webcam Motion Tracker",
 };
 
 export default function RootLayout({ children }) {
