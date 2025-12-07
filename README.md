@@ -1,2 +1,2 @@
 # SensorAI
-- motion detection project
+- motion tracker works on your webcam
