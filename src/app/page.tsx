@@ -183,7 +183,7 @@ export default function Home() {
                         legsVisible={legsVisible}
                         trackLegs={trackLegs}
                     />
-                    <Environment preset={scene} background={true} />
+                    <Environment preset={scene as any} background={true} />
                     <Controls lookAt={lookAt} />
                 </Canvas>
 
@@ -202,6 +202,16 @@ export default function Home() {
                                 if (!checked) {
                                     setFaceLandmarks(null)
                                     resetFace()
+                                }
+                            }}
+                        />
+                        <Switch checkedChildren='Hands' unCheckedChildren='Hands' defaultChecked
+                            onChange={(checked) => {
+                                trackHands = checked
+                                if (!checked) {
+                                    setlHandLandmarks(null)
+                                    setrHandLandmarks(null)
+                                    resetHands()
                                 }
                             }}
                         />
@@ -232,16 +242,6 @@ export default function Home() {
                                 } else {
                                     resetLegs()
                                     setLookAt(HALFBODY_LOOKAT)
-                                }
-                            }}
-                        />
-                        <Switch checkedChildren='Hands' unCheckedChildren='Hands' defaultChecked
-                            onChange={(checked) => {
-                                trackHands = checked
-                                if (!checked) {
-                                    setlHandLandmarks(null)
-                                    setrHandLandmarks(null)
-                                    resetHands()
                                 }
                             }}
                         />
@@ -277,9 +277,11 @@ export default function Home() {
                                 <Radio.Button value={false}>
                                     Character
                                 </Radio.Button>
+                                {/*
                                 <Radio.Button value={true} style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
                                     Launcher
                                 </Radio.Button>
+                                */}
                             </Space>
                         </Radio.Group>
                     </Space>

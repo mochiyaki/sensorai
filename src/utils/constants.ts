@@ -1,6 +1,8 @@
 interface Scene {
   label: string
   key: string
+  type: 'item'
+  [key: `data-${string}`]: any
 }
 
 export const CAM_HEIGHT = 1080
@@ -10,16 +12,16 @@ export const TRACKER_DEVICE = 'GPU'
 export const TRACKER_MODE = 'VIDEO'
 
 export const SCENES: Scene[] = [
-    { label: 'City', key: 'city' },
-    { label: 'Desert', key: 'dawn' },
-    { label: 'Forest', key: 'forest' },
-    { label: 'House', key: 'apartment' },
-    { label: 'Pier', key: 'sunset' },
-    { label: 'Lobby', key: 'lobby' },
-    { label: 'Night', key: 'night' },
-    { label: 'Park', key: 'park' },
-    { label: 'Studio', key: 'studio' },
-    { label: 'Warehouse', key: 'warehouse' },
+    { label: 'City', key: 'city', type: 'item' },
+    { label: 'Desert', key: 'dawn', type: 'item' },
+    { label: 'Forest', key: 'forest', type: 'item' },
+    { label: 'House', key: 'apartment', type: 'item' },
+    { label: 'Pier', key: 'sunset', type: 'item' },
+    { label: 'Night', key: 'night', type: 'item' },
+    { label: 'Lobby', key: 'lobby', type: 'item' },
+    { label: 'Park', key: 'park', type: 'item' }, //default
+    { label: 'Studio', key: 'studio', type: 'item' },
+    { label: 'Warehouse', key: 'warehouse', type: 'item' },
 ]
 // export const DEFAULT_SCENE = 'sunset'
 export const DEFAULT_SCENE = 'park'
@@ -62,18 +64,18 @@ export const rANKLE = 28
 export const lHEEL = 29
 export const rHEEL = 30
 
-// export const WRIST = 0
-// export const THUMB = 1
-// export const INDEX = 5
-// export const MIDDLE = 9
-// export const RING = 13
-// export const PINKY = 17
-// export const FINGERS = [THUMB, INDEX, MIDDLE, RING, PINKY]
-
 export const WRIST = 0
 export const THUMB = 1
-export const INDEX = 9
-export const MIDDLE = 10
+export const INDEX = 5
+export const MIDDLE = 9
 export const RING = 13
-export const PINKY = 11
+export const PINKY = 17
 export const FINGERS = [THUMB, INDEX, MIDDLE, RING, PINKY]
+
+// export const WRIST = 0
+// export const THUMB = 1
+// export const INDEX = 9
+// export const MIDDLE = 10
+// export const RING = 13
+// export const PINKY = 11
+// export const FINGERS = [THUMB, INDEX, MIDDLE, RING, PINKY]
