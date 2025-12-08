@@ -10,18 +10,19 @@ export const TRACKER_DEVICE = 'GPU'
 export const TRACKER_MODE = 'VIDEO'
 
 export const SCENES: Scene[] = [
-    { label: 'Apartment', key: 'apartment' },
     { label: 'City', key: 'city' },
     { label: 'Desert', key: 'dawn' },
     { label: 'Forest', key: 'forest' },
+    { label: 'House', key: 'apartment' },
+    { label: 'Pier', key: 'sunset' },
     { label: 'Lobby', key: 'lobby' },
     { label: 'Night', key: 'night' },
     { label: 'Park', key: 'park' },
     { label: 'Studio', key: 'studio' },
-    { label: 'Pier', key: 'sunset' },
     { label: 'Warehouse', key: 'warehouse' },
 ]
-export const DEFAULT_SCENE = 'sunset'
+// export const DEFAULT_SCENE = 'sunset'
+export const DEFAULT_SCENE = 'park'
 
 export const FULLBODY_LOOKAT = [0, 1, 1.5, 0, 1, 0]
 export const HALFBODY_LOOKAT = [0, 1.5, 1, 0, 1.5, 0]
@@ -61,10 +62,18 @@ export const rANKLE = 28
 export const lHEEL = 29
 export const rHEEL = 30
 
+// export const WRIST = 0
+// export const THUMB = 1
+// export const INDEX = 5
+// export const MIDDLE = 9
+// export const RING = 13
+// export const PINKY = 17
+// export const FINGERS = [THUMB, INDEX, MIDDLE, RING, PINKY]
+
 export const WRIST = 0
 export const THUMB = 1
-export const INDEX = 5
-export const MIDDLE = 9
+export const INDEX = 9
+export const MIDDLE = 10
 export const RING = 13
-export const PINKY = 17
+export const PINKY = 11
 export const FINGERS = [THUMB, INDEX, MIDDLE, RING, PINKY]
